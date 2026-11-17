@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Leitura</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 48px 20px;
+            background: #f3f1ec;
+            color: #252820;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        main {
+            width: min(100%, 900px);
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0 0 36px;
+            color: #263d32;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            text-align: center;
+        }
+
+        .saga {
+            margin-bottom: 36px;
+        }
+
+        .saga h2 {
+            margin: 0 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #c5a45c;
+            color: #263d32;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+        }
+
+        .book-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .book {
+            display: grid;
+            grid-template-columns: 140px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+            padding: 18px;
+            border: 1px solid #e3dfd4;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 14px rgb(38 61 50 / 7%);
+        }
+
+        .book--text-only {
+            grid-template-columns: 1fr;
+        }
+
+        .book-cover {
+            display: block;
+            width: 100%;
+            max-height: 220px;
+            border-radius: 6px;
+            object-fit: contain;
+            object-position: top center;
+        }
+
+        .book h3 {
+            margin: 0 0 8px;
+            color: #332d22;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            line-height: 1.35;
+        }
+
+        .book p {
+            margin: 0;
+            color: #55574f;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 32px 16px;
+            }
+
+            .book {
+                grid-template-columns: 90px minmax(0, 1fr);
+                gap: 14px;
+                padding: 14px;
+            }
+
+            .book--text-only {
+                grid-template-columns: 1fr;
+            }
+
+            .book-cover {
+                max-height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Lista de Leitura</h1>
+
+        <section class="saga" aria-labelledby="senhor-dos-aneis">
+            <h2 id="senhor-dos-aneis">Saga O Senhor dos Anéis <span>(J.R.R. Tolkien)</span></h2>
+            <div class="book-list">
+                <article class="book">
+                    <img class="book-cover" src="img/1.png" alt="Capa do livro O Senhor dos Anéis: A Sociedade do Anel">
+                    <div>
+                        <h3>O Senhor dos Anéis: A Sociedade do Anel</h3>
+                        <p><strong>Sinopse:</strong> A jornada épica começa com Frodo Bolseiro, um hobbit que deve destruir um poderoso anel que pode destruir a Terra Média se cair nas mãos do mal. Ele forma a Sociedade do Anel, composta por diversos povos, e embarca em uma perigosa jornada para Mordor.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/2.jpg" alt="Capa do livro O Senhor dos Anéis: As Duas Torres">
+                    <div>
+                        <h3>O Senhor dos Anéis: As Duas Torres</h3>
+                        <p><strong>Sinopse:</strong> A Sociedade do Anel é dividida após uma grande batalha. Enquanto Frodo e seu fiel companheiro Sam continuam a jornada para Mordor, os outros membros enfrentam desafios para proteger a Terra Média da crescente ameaça do Senhor do Escuro, Sauron.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/3.png" alt="Capa do livro O Senhor dos Anéis: O Retorno do Rei">
+                    <div>
+                        <h3>O Senhor dos Anéis: O Retorno do Rei</h3>
+                        <p><strong>Sinopse:</strong> A batalha final se aproxima enquanto Frodo se esforça para destruir o Anel em Mordor. Enquanto isso, as forças do bem lutam contra as forças do mal em uma guerra decisiva pela Terra Média.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="saga" aria-labelledby="herdeiro-do-imperio">
+            <h2 id="herdeiro-do-imperio">Trilogia O Herdeiro do Império <span>(Timothy Zahn)</span></h2>
+            <div class="book-list">
+                <article class="book book--text-only">
+                    <div>
+                        <h3>O Herdeiro do Império</h3>
+                        <p><strong>Sinopse:</strong> Cinco anos após a Batalha de Endor, a Aliança Rebelde enfrenta uma nova ameaça: o Grande Almirante Thrawn, que lidera o remanescente do Império Galáctico. Luke Skywalker, Leia Organa e Han Solo devem unir forças novamente para enfrentar esse formidável adversário.</p>
+                    </div>
+                </article>
+                <article class="book book--text-only">
+                    <div>
+                        <h3>Ascensão da Força Sombria</h3>
+                        <p><strong>Sinopse:</strong> Thrawn continua sua campanha para restaurar o poder do Império, trazendo à tona um antigo e mortal inimigo Jedi. Luke, Leia e Han enfrentam desafios pessoais e bélicos enquanto buscam deter a ameaça crescente.</p>
+                    </div>
+                </article>
+                <article class="book book--text-only">
+                    <div>
+                        <h3>O Último Comando</h3>
+                        <p><strong>Sinopse:</strong> A ameaça final de Thrawn se aproxima, e a Aliança Rebelde deve enfrentar a batalha final para determinar o destino da galáxia. Os laços entre heróis e vilões são testados, e uma nova era se inicia para a galáxia.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="saga" aria-labelledby="percy-jackson">
+            <h2 id="percy-jackson">Saga Percy Jackson e os Olimpianos <span>(Rick Riordan)</span></h2>
+            <div class="book-list">
+                <article class="book">
+                    <img class="book-cover" src="img/4.jpg" alt="Capa do livro Percy Jackson e os Olimpianos: O Ladrão de Raios">
+                    <div>
+                        <h3>O Ladrão de Raios</h3>
+                        <p><strong>Sinopse:</strong> Percy Jackson descobre que é um semideus, filho de Poseidon, e embarca em uma missão para recuperar o raio de Zeus, roubado e acusado injustamente de ser o ladrão. Ele precisa provar sua inocência enquanto enfrenta desafios dos deuses do Olimpo.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/5.jpg" alt="Capa do livro Percy Jackson e os Olimpianos: O Mar de Monstros">
+                    <div>
+                        <h3>O Mar de Monstros</h3>
+                        <p><strong>Sinopse:</strong> Percy e seus amigos embarcam em uma aventura perigosa para encontrar o Velocino de Ouro, que pode curar a árvore de Thalia, protegendo o Acampamento Meio-Sangue. Enfrentando criaturas mitológicas e desafios épicos, eles descobrem segredos surpreendentes.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/6.jpg" alt="Capa do livro Percy Jackson e os Olimpianos: A Maldição do Titã">
+                    <div>
+                        <h3>A Maldição do Titã</h3>
+                        <p><strong>Sinopse:</strong> Percy se une a novos aliados para enfrentar a maldição do titã Atlas e impedir que ele se liberte do Tártaro. Nesta aventura emocionante, o destino dos deuses e da humanidade está em jogo.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/7.jpg" alt="Capa do livro Percy Jackson e os Olimpianos: A Batalha do Labirinto">
+                    <div>
+                        <h3>A Batalha do Labirinto</h3>
+                        <p><strong>Sinopse:</strong> Percy e seus amigos exploram um perigoso labirinto que se encontra no centro do Acampamento Meio-Sangue. Eles enfrentam monstros temíveis e desvendam segredos que podem abalar o mundo dos deuses.</p>
+                    </div>
+                </article>
+                <article class="book">
+                    <img class="book-cover" src="img/8.jpg" alt="Capa do livro Percy Jackson e os Olimpianos: O Último Olimpiano">
+                    <div>
+                        <h3>O Último Olimpiano</h3>
+                        <p><strong>Sinopse:</strong> A profecia se concretiza, e a batalha final entre os deuses olimpianos e os titãs se aproxima. Percy lidera seus amigos na defesa do Monte Olimpo contra a invasão das forças do mal, decidindo o destino dos deuses e dos mortais.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

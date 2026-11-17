@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links no HTML5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #f3f1ec;
+            color: #292d29;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        main {
+            width: min(100%, 850px);
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            color: #263d32;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        nav,
+        section {
+            margin-bottom: 24px;
+            padding: 20px;
+            border: 1px solid #e3dfd4;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 14px rgb(38 61 50 / 6%);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #176345;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #a36c0a;
+        }
+
+        code {
+            padding: 2px 5px;
+            border-radius: 4px;
+            background: #f1f0eb;
+            color: #513f28;
+        }
+
+        .cover-link img {
+            display: block;
+            width: 130px;
+            max-height: 190px;
+            margin-top: 12px;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body id="topo">
+    <main>
+        <h1>Exemplos de links no HTML5</h1>
+        <p>Links são criados com a tag <code>&lt;a&gt;</code>. O destino é informado no atributo <code>href</code>.</p>
+
+        <nav aria-label="Navegação pelos exemplos">
+            <strong>Ir direto para um exemplo:</strong>
+            <ul>
+                <li><a href="#link-externo">Link externo</a></li>
+                <li><a href="#link-interno">Link interno</a></li>
+                <li><a href="#link-relativo">Link relativo</a></li>
+                <li><a href="#email-telefone">E-mail e telefone</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#imagem-link">Imagem como link</a></li>
+            </ul>
+        </nav>
+
+        <section id="link-externo">
+            <h2>1. Link para outro site</h2>
+            <p>Use um endereço completo, começando com <code>https://</code>.</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a">Documentação da tag &lt;a&gt; na MDN</a></p>
+            <p>Para abrir em outra aba, use <code>target="_blank"</code> junto com <code>rel="noopener noreferrer"</code>:</p>
+            <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a" target="_blank" rel="noopener noreferrer">Abrir a documentação em outra aba</a></p>
+        </section>
+
+        <section id="link-interno">
+            <h2>2. Link para outra parte da mesma página</h2>
+            <p>O valor de <code>href</code> começa com <code>#</code> e corresponde ao <code>id</code> do elemento de destino. Experimente <a href="#download">ir até o exemplo de download</a>.</p>
+        </section>
+
+        <section id="link-relativo">
+            <h2>3. Link para outra página do projeto</h2>
+            <p>Um caminho relativo aponta para um arquivo a partir da localização desta página. Como este arquivo está na mesma pasta, podemos abrir a página de imagens:</p>
+            <p><a href="1.5_imagens.html">Ver a lista de leitura</a></p>
+        </section>
+
+        <section id="email-telefone">
+            <h2>4. Links de e-mail e telefone</h2>
+            <p>O protocolo <code>mailto:</code> abre o aplicativo de e-mail:</p>
+            <p><a href="mailto:contato@example.com?subject=Ol%C3%A1">Enviar um e-mail</a></p>
+            <p>O protocolo <code>tel:</code> pode iniciar uma ligação em dispositivos compatíveis:</p>
+            <p><a href="tel:+5511999999999">Ligar para (11) 99999-9999</a></p>
+        </section>
+
+        <section id="download">
+            <h2>5. Link para baixar um arquivo</h2>
+            <p>O atributo <code>download</code> sugere que o navegador baixe o arquivo em vez de abri-lo:</p>
+            <p><a href="img/1.png" download="capa-sociedade-do-anel.png">Baixar a capa de A Sociedade do Anel</a></p>
+        </section>
+
+        <section id="imagem-link">
+            <h2>6. Imagem clicável</h2>
+            <p>Coloque a imagem dentro da tag <code>&lt;a&gt;</code> para torná-la um link:</p>
+            <a class="cover-link" href="1.5_imagens.html" aria-label="Abrir a lista de leitura">
+                <img src="img/1.png" alt="Capa de A Sociedade do Anel">
+            </a>
+        </section>
+
+        <a class="back-to-top" href="#topo">Voltar ao topo</a>
+    </main>
+</body>
+</html>
