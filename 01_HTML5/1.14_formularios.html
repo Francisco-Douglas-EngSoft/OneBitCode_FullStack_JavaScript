@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container{
+            padding: 20px;
+            box-shadow: 5px 5px 5px #555;
+            background-color: lightblue;
+            display: flex;
+            width: 100%;
+            max-width: 400px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas no HTML5</h1>
+
+    <!--Os metodos no Formulario são post e get-->
+    <div class="container">
+        <form action="https://google.com/search" method="post"> 
+            <label for="text">Digite o Seu Nome</label>
+            <input type="text" placeholder="Digite o Seu Nome:">
+            <label for="number">Idade</label>
+            <input type="number">
+            <button>Envia Dados</button>
+        </form>
+    </div>
+</body>
+</html>

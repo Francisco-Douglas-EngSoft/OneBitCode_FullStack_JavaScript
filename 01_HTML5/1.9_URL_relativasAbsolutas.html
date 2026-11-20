@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL relativas e absolutas</title>
+</head>
+<body>
+    <h1>URLs relativas e absolutas</h1>
+
+    <h2>URL absoluta</h2>
+    <p>
+        Uma URL absoluta contém o endereço completo do recurso, incluindo o
+        protocolo e o domínio.
+    </p>
+    <p>Exemplo: <a href="https://www.google.com" target="_blank">Acessar o Google</a></p>
+
+    <h2>URL relativa</h2>
+    <p>
+        Uma URL relativa informa o caminho de um recurso em relação à página
+        atual. Ela não possui o domínio do site.
+    </p>
+    <p>Exemplo na mesma pasta: <a href="pagina.html">Abrir pagina.html</a></p>
+    <p>Exemplo em uma pasta interna: <a href="imagens/foto.jpg">Abrir uma imagem</a></p>
+
+    <h2>Caminhos especiais</h2>
+    <ul>
+        <li><code>.</code> representa a pasta atual.</li>
+        <li><code>..</code> representa a pasta anterior.</li>
+        <li><code>/</code> separa pastas no endereço.</li>
+    </ul>
+    <p>Exemplo para voltar uma pasta: <a href="../pagina.html">Abrir pagina.html na pasta anterior</a></p>
+</body>
+</html>

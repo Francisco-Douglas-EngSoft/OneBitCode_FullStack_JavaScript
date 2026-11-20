@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inputs no HTML5</h1>
+
+    <form action="">
+        <!--Input tipo text-->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required>
+
+        <!--Input email-->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite o Email" required>
+
+        <!--Numero telefone-->
+        <label for="phone">WhatsaPP:</label>
+        <input type="number" name="phone" id="phone">
+
+        <!--Senha-->
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required placeholder="Digite a Senha">
+
+        <!--Seleção-->
+        <label for="genero">Genero:</label><br>
+        <label for="masculino">Masculino:</label>
+        <input type="radio" name="masculino" id="masculino">
+        <label for="feminino">Feminino:</label>
+        <input type="radio" name="feminino" id="feminino">
+
+        <!--Tipo Chekbox-->
+        <label for="interesses">Interesses:</label>
+        <input type="checkbox" name="interesses" id="" value="backend">
+        <input type="checkbox" name="interesses" id="" value="backend">
+        <input type="checkbox" name="interesses" id="" value="backend">
+        <input type="checkbox" name="interesses" id="" value="backend">
+    </form>
+</body>
+</html>
