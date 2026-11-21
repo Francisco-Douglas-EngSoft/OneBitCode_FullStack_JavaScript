@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exemplos práticos de recursos modernos do HTML5.">
+    <title>Recursos modernos do HTML5</title>
+    <style>
+        :root {
+            font-family: "Segoe UI", sans-serif;
+            color: #20283a;
+            background: #f4f6fb;
+            line-height: 1.6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 16px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: #fff;
+            color: #3345b5;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        header,
+        main,
+        footer {
+            width: min(100% - 32px, 960px);
+            margin-inline: auto;
+        }
+
+        header {
+            padding: 64px 0 32px;
+        }
+
+        header p {
+            max-width: 650px;
+            color: #687187;
+            font-size: 1.1rem;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: clamp(2rem, 6vw, 3.25rem);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        h2 {
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 8px 13px;
+            border: 1px solid #dfe3ec;
+            border-radius: 999px;
+            background: #fff;
+            color: #4653c5;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            border-color: #6873e6;
+        }
+
+        main {
+            display: grid;
+            gap: 18px;
+        }
+
+        section {
+            padding: clamp(22px, 4vw, 32px);
+            border: 1px solid #e8ebf2;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 12px 32px rgb(34 48 78 / 5%);
+        }
+
+        .section-intro {
+            margin-bottom: 20px;
+            color: #687187;
+        }
+
+        .semantic-example {
+            padding: 16px;
+            border-left: 4px solid #6873e6;
+            border-radius: 8px;
+            background: #f6f7ff;
+        }
+
+        .semantic-example p:last-child {
+            margin-bottom: 0;
+        }
+
+        details {
+            padding: 14px 16px;
+            border: 1px solid #e8ebf2;
+            border-radius: 12px;
+        }
+
+        summary {
+            color: #4653c5;
+            font-weight: 650;
+            cursor: pointer;
+        }
+
+        details p {
+            margin: 12px 0 0;
+            color: #687187;
+        }
+
+        .indicators {
+            display: grid;
+            gap: 20px;
+        }
+
+        .indicator {
+            display: grid;
+            gap: 8px;
+        }
+
+        progress,
+        meter {
+            width: 100%;
+            height: 14px;
+            accent-color: #5865d8;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .field {
+            display: grid;
+            gap: 7px;
+        }
+
+        .field-full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            min-height: 46px;
+            padding: 10px 12px;
+            border: 1px solid #dfe3ec;
+            border-radius: 10px;
+            background: #fbfcfe;
+            color: inherit;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus-visible,
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid rgb(104 115 230 / 35%);
+            outline-offset: 2px;
+        }
+
+        button {
+            border: 0;
+            background: #5865d8;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4653c5;
+        }
+
+        footer {
+            padding: 28px 0 40px;
+            color: #687187;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding-top: 44px;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header>
+        <p>HTML5 na prática</p>
+        <h1>Recursos modernos do HTML5</h1>
+        <p>Conheça recursos nativos que deixam as páginas mais semânticas, acessíveis e interativas, sem depender de bibliotecas.</p>
+        <nav aria-label="Navegação da página">
+            <ul>
+                <li><a href="#semantica">Semântica</a></li>
+                <li><a href="#interatividade">Interatividade</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section id="semantica" aria-labelledby="titulo-semantica">
+            <h2 id="titulo-semantica">Elementos semânticos</h2>
+            <p class="section-intro">Elementos como <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code> e <code>article</code> descrevem o propósito de cada parte da página.</p>
+            <article class="semantic-example">
+                <h3>Um conteúdo independente</h3>
+                <p>Use <code>article</code> para uma publicação ou conteúdo que faça sentido por conta própria. O elemento <code>time</code> pode marcar datas de forma legível por máquinas, como <time datetime="2026-11-20">20 de novembro de 2026</time>.</p>
+            </article>
+        </section>
+
+        <section id="interatividade" aria-labelledby="titulo-interatividade">
+            <h2 id="titulo-interatividade">Interatividade nativa</h2>
+            <p class="section-intro">Crie conteúdo expansível e indicadores sem precisar implementar esses controles do zero.</p>
+            <details>
+                <summary>Como funciona o elemento details?</summary>
+                <p>O navegador oferece um controle expansível acessível. Clique no título para mostrar ou ocultar esta explicação.</p>
+            </details>
+            <div class="indicators">
+                <div class="indicator">
+                    <label for="progresso">Progresso de leitura</label>
+                    <progress id="progresso" value="70" max="100">70%</progress>
+                </div>
+                <div class="indicator">
+                    <label for="nivel">Nível de satisfação</label>
+                    <meter id="nivel" min="0" max="5" low="2" high="4" optimum="5" value="4">4 de 5</meter>
+                </div>
+            </div>
+        </section>
+
+        <section id="formularios" aria-labelledby="titulo-formularios">
+            <h2 id="titulo-formularios">Formulários mais inteligentes</h2>
+            <p class="section-intro">Tipos de campo e validações nativas ajudam a coletar dados no formato esperado, inclusive em dispositivos móveis.</p>
+            <form action="#" method="get">
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="data">Data de contato</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div class="field field-full">
+                    <label for="tema">Tema</label>
+                    <input type="text" id="tema" name="tema" list="temas" placeholder="Escolha ou digite um tema">
+                    <datalist id="temas">
+                        <option value="Acessibilidade">
+                        <option value="Formulários">
+                        <option value="Semântica">
+                    </datalist>
+                </div>
+                <div class="field field-full">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                </div>
+                <div class="field field-full">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Exemplos de elementos nativos do HTML5.</p>
+    </footer>
+</body>
+</html>
