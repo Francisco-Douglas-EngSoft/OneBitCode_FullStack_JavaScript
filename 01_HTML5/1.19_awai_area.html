@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de área clicável e acessibilidade</title>
+    <style>
+        body {
+            max-width: 700px;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        area:focus {
+            outline: 4px solid #005fcc;
+        }
+
+        #status {
+            margin-top: 16px;
+            padding: 12px;
+            border-left: 4px solid #005fcc;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Mapa de imagem acessível</h1>
+        <p id="descricao-mapa">
+            Selecione uma das áreas da capa: o título ou a parte inferior da imagem.
+        </p>
+
+        <img
+            src="img/1.png"
+            alt="Capa do livro O Senhor dos Anéis: A Sociedade do Anel"
+            width="838"
+            height="1296"
+            usemap="#mapa-capa"
+            aria-describedby="descricao-mapa"
+        >
+
+        <map name="mapa-capa" aria-label="Áreas clicáveis da capa do livro">
+            <area
+                shape="rect"
+                coords="140,180,700,650"
+                href="#titulo"
+                alt="Título do livro"
+                aria-label="Ir para a seção com o título do livro"
+                onclick="anunciar('Você selecionou o título do livro.')"
+            >
+            <area
+                shape="rect"
+                coords="150,1040,700,1280"
+                href="#autores"
+                alt="Informações dos autores"
+                aria-label="Ir para a seção com informações dos autores"
+                onclick="anunciar('Você selecionou a parte inferior da capa.')"
+            >
+        </map>
+
+        <section id="titulo">
+            <h2>O Senhor dos Anéis</h2>
+        </section>
+
+        <section id="autores">
+            <h2>A Sociedade do Anel</h2>
+        </section>
+
+        <p id="status" role="status" aria-live="polite">
+            Nenhuma área foi selecionada.
+        </p>
+    </main>
+
+    <script>
+        function anunciar(mensagem) {
+            document.getElementById("status").textContent = mensagem;
+        }
+    </script>
+</body>
+</html>
