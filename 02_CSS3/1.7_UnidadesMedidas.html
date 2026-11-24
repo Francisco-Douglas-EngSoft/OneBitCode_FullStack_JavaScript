@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medidas em CSS</title>
+
+    <link rel="stylesheet" href="./1.7_UnidadesMedidas.css">
+</head>
+<body>
+    <main>
+        <h1>Unidades de medidas em CSS</h1>
+
+        <section>
+            <h2>Unidades absolutas</h2>
+            <p class="medida-px">Texto com 20px.</p>
+            <p class="medida-cm">Borda com largura de 5cm.</p>
+            <p class="medida-mm">Borda com largura de 50mm.</p>
+            <p class="medida-in">Borda com largura de 2in.</p>
+            <p class="medida-pt">Texto com 18pt.</p>
+            <p class="medida-pc">Texto com 1.5pc.</p>
+        </section>
+
+        <section>
+            <h2>Unidades relativas à fonte</h2>
+            <p class="medida-em">Texto com 1.5em.</p>
+            <div class="container-em">
+                <p>Container com tamanho base de 20px.</p>
+                <p class="medida-em-filho">Texto filho com 1.5em.</p>
+            </div>
+            <p class="medida-rem">Texto com 1.5rem.</p>
+        </section>
+
+        <section>
+            <h2>Unidades relativas ao viewport</h2>
+            <p class="medida-vw">Texto com tamanho baseado em 4vw.</p>
+            <p class="medida-vh">Largura baseada em 50vh.</p>
+            <div class="caixa-vw">Largura: 50vw</div>
+            <div class="caixa-vh">Altura: 20vh</div>
+            <div class="caixa-vmin">Largura: 30vmin</div>
+            <div class="caixa-vmax">Largura: 50vmax</div>
+        </section>
+
+        <section>
+            <h2>Porcentagem</h2>
+            <div class="container-percentual">
+                <div class="caixa-25">25%</div>
+                <div class="caixa-50">50%</div>
+                <div class="caixa-75">75%</div>
+                <div class="caixa-100">100%</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Comparação de unidades</h2>
+            <div class="grade-medidas">
+                <div class="medida-100-px">100px</div>
+                <div class="medida-10-rem">10rem</div>
+                <div class="medida-50-percent">50%</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Uso prático</h2>
+            <div class="card">
+                <h3>Card responsivo</h3>
+                <p>Usa largura em porcentagem, espaçamento em rem e arredondamento em px.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

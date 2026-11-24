@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 32px;
+    background-color: #f4f6f8;
+    color: #263238;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #2364aa;
+    text-align: center;
+}
+
+h2 {
+    color: #3da5d9;
+}
+
+.medida-px {
+    font-size: 20px;
+}
+
+.medida-cm {
+    border: 2px solid #2364aa;
+    width: 5cm;
+}
+
+.medida-mm {
+    border: 2px solid #3da5d9;
+    width: 50mm;
+}
+
+.medida-in {
+    border: 2px solid #7b2cbf;
+    width: 2in;
+}
+
+.medida-pt {
+    font-size: 18pt;
+}
+
+.medida-pc {
+    font-size: 1.5pc;
+}
+
+.medida-em {
+    font-size: 1.5em;
+}
+
+.container-em {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #e9f5ff;
+}
+
+.medida-em-filho {
+    font-size: 1.5em;
+}
+
+.medida-rem {
+    font-size: 1.5rem;
+}
+
+.medida-vw {
+    font-size: 4vw;
+}
+
+.medida-vh {
+    width: 50vh;
+}
+
+.caixa-vw,
+.caixa-vh,
+.caixa-vmin,
+.caixa-vmax {
+    height: 40px;
+    margin: 8px 0;
+    padding: 8px;
+    color: #ffffff;
+    background-color: #2364aa;
+}
+
+.caixa-vw {
+    width: 50vw;
+}
+
+.caixa-vh {
+    height: 20vh;
+}
+
+.caixa-vmin {
+    width: 30vmin;
+}
+
+.caixa-vmax {
+    width: 50vmax;
+}
+
+.container-percentual {
+    width: 100%;
+}
+
+.container-percentual div {
+    height: 35px;
+    margin: 6px 0;
+    padding: 8px;
+    color: #ffffff;
+    background-color: #7b2cbf;
+}
+
+.caixa-25 {
+    width: 25%;
+}
+
+.caixa-50 {
+    width: 50%;
+}
+
+.caixa-75 {
+    width: 75%;
+}
+
+.caixa-100 {
+    width: 100%;
+}
+
+.grade-medidas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grade-medidas div {
+    height: 40px;
+    padding: 10px;
+    background-color: #ffd166;
+}
+
+.medida-100-px {
+    width: 100px;
+}
+
+.medida-10-rem {
+    width: 10rem;
+}
+
+.medida-50-percent {
+    width: 50%;
+}
+
+.card {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
