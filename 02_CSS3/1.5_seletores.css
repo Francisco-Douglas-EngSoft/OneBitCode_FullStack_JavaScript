@@ -1,0 +1,128 @@
+/* Seletor universal: aplica-se a todos os elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Seletor de elemento */
+body {
+    margin: 0;
+    padding: 32px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #242424;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #2364aa;
+}
+
+h2 {
+    color: #3da5d9;
+}
+
+/* Seletor de classe */
+.destaque {
+    padding: 8px;
+    border-left: 4px solid #f6ae2d;
+    background-color: #fff3cd;
+}
+
+/* Seletor de ID */
+#titulo-especial {
+    color: #ffffff;
+    padding: 8px;
+    background-color: #7b2cbf;
+}
+
+/* Seletor de atributo */
+[href] {
+    display: inline-block;
+    margin: 4px;
+}
+
+[href^="https"] {
+    color: #2a9d8f;
+}
+
+[href^="/"] {
+    color: #e76f51;
+}
+
+[target="_blank"] {
+    font-weight: bold;
+}
+
+[type="email"] {
+    border: 2px solid #e76f51;
+}
+
+/* Seletor agrupado */
+h1,
+h2,
+.grupo {
+    letter-spacing: 1px;
+}
+
+/* Seletor descendente */
+.descendente p {
+    margin: 6px 0;
+    color: #576ca8;
+}
+
+/* Seletor filho direto */
+.lista > li {
+    padding: 6px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* Seletor irmão adjacente */
+.grupo-irmaos h3 + p {
+    font-weight: bold;
+    color: #d62828;
+}
+
+/* Seletor geral de irmãos */
+.grupo-irmaos h3 ~ p {
+    background-color: #edf6f9;
+}
+
+/* Pseudo-classe: estado do elemento */
+button:hover {
+    background-color: #2364aa;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: 3px solid #90caf9;
+}
+
+.lista-pseudoclasses li:first-child {
+    color: #2a9d8f;
+}
+
+.lista-pseudoclasses li:last-child {
+    color: #d62828;
+}
+
+.lista-pseudoclasses li:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Pseudo-elementos */
+.frase::before {
+    content: "Antes: ";
+    font-weight: bold;
+}
+
+.frase::after {
+    content: " :Depois";
+    font-weight: bold;
+}

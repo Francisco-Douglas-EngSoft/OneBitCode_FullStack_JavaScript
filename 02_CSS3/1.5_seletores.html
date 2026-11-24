@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+
+    <link rel="stylesheet" href="./1.5_seletores.css">
+</head>
+<body>
+    <h1>Seletores CSS</h1>
+
+    <section class="introducao">
+        <h2>Seletores básicos</h2>
+        <p>Este parágrafo usa o seletor de elemento <code>p</code>.</p>
+        <p class="destaque">Este parágrafo usa o seletor de classe <code>.destaque</code>.</p>
+        <p id="titulo-especial">Este parágrafo usa o seletor de ID <code>#titulo-especial</code>.</p>
+    </section>
+
+    <section>
+        <h2>Seletores de atributo</h2>
+        <a href="https://www.google.com" target="_blank">Link externo</a>
+        <a href="/pagina-interna">Link interno</a>
+        <input type="text" placeholder="Campo de texto">
+        <input type="email" placeholder="Campo de email">
+    </section>
+
+    <section>
+        <h2>Seletores combinados</h2>
+        <div class="descendente">
+            <p>Parágrafo descendente</p>
+            <article>
+                <p>Parágrafo dentro de um elemento filho mais distante</p>
+            </article>
+        </div>
+
+        <ul class="lista">
+            <li>Item direto 1</li>
+            <li>Item direto 2</li>
+            <li>
+                Item direto 3
+                <ul>
+                    <li>Item interno</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Seletores de irmãos</h2>
+        <div class="grupo-irmaos">
+            <h3>Título de referência</h3>
+            <p>Este parágrafo é irmão adjacente do título.</p>
+            <p>Este parágrafo é irmão geral do título.</p>
+            <p>Outro irmão geral do título.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Seletores agrupados</h2>
+        <p class="grupo">Primeiro elemento do grupo.</p>
+        <span class="grupo">Segundo elemento do grupo.</span>
+    </section>
+
+    <section>
+        <h2>Pseudo-classes e pseudo-elementos</h2>
+        <button type="button">Passe o mouse aqui</button>
+        <input type="text" placeholder="Clique neste campo">
+        <ul class="lista-pseudoclasses">
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li>Terceiro item</li>
+        </ul>
+        <p class="frase">Texto com pseudo-elementos.</p>
+    </section>
+</body>
+</html>
