@@ -1,0 +1,12 @@
+:root {
+    --cor-tema: #434543;
+    --cor-h1: #1f5ed3;
+    --box-cor: linear-gradient(#323, #556, #987);
+
+}
+
+h1{
+    color: var(--cor-h1);
+    box-shadow: 10px 10px 10px var(--box-cor);
+    background: var((--box-cor));
+}
